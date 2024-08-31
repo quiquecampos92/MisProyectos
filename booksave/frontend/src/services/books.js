@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const basedUrl = 'http://localhost:3001/api/books'
+const basedUrl = '/api/books'
 
 const getAllBooks = () => {
     return axios.get(basedUrl)
