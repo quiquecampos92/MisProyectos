@@ -22,7 +22,7 @@ let bookSchema = new mongoose.Schema({
     },
     author: {
         type: String,
-        minlength: 1,
+        minlength: 2,
     },
     points: {
         type: Number,
@@ -34,10 +34,10 @@ let bookSchema = new mongoose.Schema({
     review: {
         type: String,
         required: true,
-        minlength: 10
+        minlength: 5
     },
     reading_Date: {
-        type: Date,
+        type: String,
     },
     owner: {
         type: String,

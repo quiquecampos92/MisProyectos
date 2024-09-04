@@ -6,22 +6,22 @@ const getAllBooks = () => {
     return axios.get(basedUrl)
 }
 
-// const createContact = (newContact) => {
-//     return axios.post(basedUrl, newContact)
-// }
+const createBook = (newBook) => {
+    return axios.post(basedUrl, newBook)
+}
 
-// const updateContact = (id, modifiedContact) => {
-//     return axios.put(`${basedUrl}/${id}`, modifiedContact)
-// }
+const updateBook = (id, modifiedBook) => {
+    return axios.put(`${basedUrl}/${id}`, modifiedBook)
+}
 
-// const deleteContact = (id) => {
-//     console.log('Contacto eliminado');
-//     return axios.delete(`${basedUrl}/${id}`)
-// }
+const deleteBook = (id) => {
+    console.log('Book eliminado');
+    return axios.delete(`${basedUrl}/${id}`)
+}
 
 export default {
-    getAllBooks
-    // createContact,
-    // updateContact,
-    // deleteContact
+    getAllBooks,
+    createBook,
+    updateBook,
+    deleteBook
 }
