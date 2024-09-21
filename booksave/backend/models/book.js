@@ -8,7 +8,7 @@ console.log('connecting to', url)
 
 mongoose.connect(url)
     .then(result => {
-        console.log('connected to MongoDB')
+        console.log('connected to MongoDB to view books')
     })
     .catch(error => {
         console.log('error connecting to MongoDB:', error.message)
@@ -50,6 +50,10 @@ let bookSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 })
 
@@ -61,6 +65,6 @@ bookSchema.set('toJSON', {
     }
 })
 
-const Book = mongoose.model('book', bookSchema);
+const Book = mongoose.model('Book', bookSchema);
 
 module.exports = Book;
